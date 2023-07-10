@@ -5,3 +5,10 @@ ingreso de datos por parte del usuario, de acuerdo con el tema asignado y realiz
 actualizacion, borrado, busqueda de datos. ademas la aplicacion debe guardar cada uno de los datos en un archivo 
 plano de tipo .CSV (valores separados por comas). cada registro guardado en el archivo plano debe incluir tambien 
 los datos de fecha y hora de creacion del registro*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#define MAXimo 100
