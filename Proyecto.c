@@ -37,4 +37,11 @@ void guardarRegistro(CuentaBancaria cuenta) {
     tiempo = time(NULL);
     fecha = localtime(&tiempo);
     strftime(fechaHora, MAXimo, "%Y-%m-%d %H:%M:%S", fecha);
-    
+
+    // Guardar los datos en el archivo CSV
+    fprintf(archivo, "%d,%.2f,%s\n", cuenta.numeroCuenta, cuenta.saldo, fechaHora);
+
+    fclose(archivo);
+}
+
+
