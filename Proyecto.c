@@ -51,4 +51,17 @@ void realizarDeposito(CuentaBancaria* cuenta, float monto) {
     printf("Depósito realizado con éxito.\n");
 }
 
+// Función para realizar un retiro de una cuenta
+void realizarRetiro(CuentaBancaria* cuenta, float monto) {
+    if (monto > cuenta->saldo) {
+        printf("Saldo insuficiente.\n");
+        return;
+    }
+
+    cuenta->saldo -= monto;
+    guardarRegistro(*cuenta);
+    printf("Retiro realizado con éxito.\n");
+}
+
+
 
