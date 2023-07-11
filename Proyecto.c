@@ -28,3 +28,12 @@ void guardarRegistro(CuentaBancaria cuenta) {
         printf("Error al abrir el archivo.\n");
         return;
     }
+
+    // Obtener la fecha y hora actual
+    time_t tiempo;
+    struct tm* fecha;
+    char fechaHora[MAXimo];
+
+    tiempo = time(NULL);
+    fecha = localtime(&tiempo);
+    strftime(fechaHora, MAXimo, "%Y-%m-%d %H:%M:%S", fecha);
