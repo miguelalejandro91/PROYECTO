@@ -37,3 +37,4 @@ void guardarRegistro(CuentaBancaria cuenta) {
     tiempo = time(NULL);
     fecha = localtime(&tiempo);
     strftime(fechaHora, MAXimo, "%Y-%m-%d %H:%M:%S", fecha);
+    
