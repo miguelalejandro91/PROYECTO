@@ -44,4 +44,11 @@ void guardarRegistro(CuentaBancaria cuenta) {
     fclose(archivo);
 }
 
+// Función para realizar un depósito en una cuenta
+void realizarDeposito(CuentaBancaria* cuenta, float monto) {
+    cuenta->saldo += monto;
+    guardarRegistro(*cuenta);
+    printf("Depósito realizado con éxito.\n");
+}
+
 
