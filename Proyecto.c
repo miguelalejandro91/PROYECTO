@@ -68,3 +68,47 @@ void consultarSaldo(CuentaBancaria cuenta) {
     printf("Saldo actual: %.2f\n", cuenta.saldo);
 }
 
+int main() {
+    CuentaBancaria cuenta;
+    cuenta.numeroCuenta = 12345;
+    cuenta.saldo = 1000.0;
+
+    int opcion;
+    float monto;
+
+    while (1) {
+        printf("\n");
+        printf("1. Realizar deposito\n");
+        printf("2. Realizar retiro\n");
+        printf("3. Consultar saldo\n");
+        printf("4. Salir\n");
+        printf("Seleccione una opcion: ");
+        scanf("%d", &opcion);
+
+        switch (opcion) {
+            case 1:
+                printf("Ingrese el monto a depositar: ");
+                scanf("%f", &monto);
+                realizarDeposito(&cuenta, monto);
+                break;
+            case 2:
+                printf("Ingrese el monto a retirar: ");
+                scanf("%f", &monto);
+                realizarRetiro(&cuenta, monto);
+                break;
+            case 3:
+                consultarSaldo(cuenta);
+                break;
+            case 4:
+                printf("Saliendo del programa...\n");
+                exit(0);
+            default:
+                printf("Opción invalida.\n");
+                break;
+        }
+    }
+
+    return 0;
+}
+
+
