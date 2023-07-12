@@ -12,3 +12,9 @@ los datos de fecha y hora de creacion del registro*/
 #include <time.h>
 
 #define MAXimo 100
+
+// Estructura para almacenar los datos de una cuenta bancaria
+typedef struct {
+    int numeroCuenta;
+    float saldo;
+} CuentaBancaria;
