@@ -63,3 +63,7 @@ void realizarRetiro(CuentaBancaria* cuenta, float monto) {
     printf("Retiro realizado con exito.\n");
 }
 
+// Función para consultar el saldo de una cuenta
+void consultarSaldo(CuentaBancaria cuenta) {
+    printf("Saldo actual: %.2f\n", cuenta.saldo);
+}
