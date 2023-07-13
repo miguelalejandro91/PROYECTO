@@ -18,3 +18,13 @@ typedef struct {
     int numeroCuenta;
     float saldo;
 } CuentaBancaria;
+
+// Función para guardar los registros en un archivo CSV
+void guardarRegistro(CuentaBancaria cuenta) {
+    FILE* archivo;
+    archivo = fopen("registros.csv", "a"); // Abrir archivo en modo "append"
+
+    if (archivo == NULL) {
+        printf("Error al abrir el archivo.\n");
+        return;
+    }
