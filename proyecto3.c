@@ -26,7 +26,7 @@ void guardarRegistro(CuentaBancaria cuenta) {
 
     if (archivo == NULL) {
         printf("Error al abrir el archivo.\n");
-        return;
+        
     }
 
 // Obtener la fecha y hora actual
@@ -55,7 +55,7 @@ void realizarDeposito(CuentaBancaria* cuenta, float monto) {
 void realizarRetiro(CuentaBancaria* cuenta, float monto) {
     if (monto > cuenta->saldo) {
         printf("Saldo insuficiente.\n");
-        return;
+        
     }
 
     cuenta->saldo -= monto;
